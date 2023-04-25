@@ -1,0 +1,200 @@
+<html>
+<style>
+  /* The grid: Four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+  }
+
+  /* Style the images inside the grid */
+  .column img {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  .column img:hover {
+    opacity: 1;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* The expanding image container (positioning is needed to position the close button and the text) */
+  .container {
+    position: relative;
+    display: none;
+  }
+
+  /* Expanding image text */
+  #imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+  }
+
+  /* Closable button inside the image */
+  .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+  }
+</style>
+
+<script type="text/javascript">
+  function myFunction(imgs) {
+    // Get the expanded image
+    var expandImg = document.getElementById("expandedImg");
+    // Get the image text
+    var imgText = document.getElementById("imgtext");
+    // Use the same src in the expanded image as the image being clicked on from the grid
+    expandImg.src = imgs.src;
+    // Use the value of the alt attribute of the clickable image as text inside the expanded image
+    imgText.innerHTML = imgs.alt;
+    // Show the container element (hidden with CSS)
+    expandImg.parentElement.style.display = "block";
+  } 
+</script>
+<body>
+
+<!-- The expanding image container -->
+<div class="container">
+  <!-- Close the image -->
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <!-- Expanded image -->
+  <img id="expandedImg" style="width:100%">
+  <!-- Image text -->
+  <div id="imgtext"></div>
+</div>
+
+<div>
+  <center>
+    Supplementary Material for: <br/><i>"Benchmarking Spatial Relationships in Text-to-Image Generation"</i>
+    <br>
+    Code and Data: <a href="https://github.com/tejas-gokhale/visor">https://github.com/tejas-gokhale/visor</a>
+    <hr>
+    <h1>GENERATED IMAGES</h1>
+    <h2>Please refresh browser to get a new example</h2>
+  </center>
+</div>
+<hr/>
+<div class="col-xs-4 col-md-4">
+  <center>
+    <h2> Text: <span id="txt" /></h2>
+    <hr/>
+    <table>
+      <tr>
+        <td><center><h2>GLIDE</h2></center> </td>
+        <td><center><h2>GLIDE + CDM</h2></center></td>
+        <td><center><h2>DALLE-mini</h2></center></td>
+        <td><center><h2>CogView2</h2></center></td>
+        <td><center><h2>DALLE-v2</h2></center></td>
+        <td><center><h2>Stable Diffusion</h2></center></td>
+        <td><center><h2>SD + CDM</h2></center></td>
+      </tr>
+      <tr>
+        <td><img alt="", id="m0_0", width="256", height="256" /></td>
+        <td><img alt="", id="m1_0", width="256", height="256" /></td>
+        <td><img alt="", id="m2_0", width="256", height="256" /></td>
+        <td><img alt="", id="m3_0", width="256", height="256" /></td>
+        <td><img alt="", id="m4_0", width="256", height="256" /></td>
+        <td><img alt="", id="m5_0", width="256", height="256" /></td>
+        <td><img alt="", id="m6_0", width="256", height="256" /></td>
+      </tr>
+      <tr>
+        <td><img alt="", id="m0_1", width="256", height="256" /></td>
+        <td><img alt="", id="m1_1", width="256", height="256" /></td>
+        <td><img alt="", id="m2_1", width="256", height="256" /></td>
+        <td><img alt="", id="m3_1", width="256", height="256" /></td>
+        <td><img alt="", id="m4_1", width="256", height="256" /></td>
+        <td><img alt="", id="m5_1", width="256", height="256" /></td>
+        <td><img alt="", id="m6_1", width="256", height="256" /></td>
+      </tr>
+      <tr>
+        <td><img alt="", id="m0_2", width="256", height="256" /></td>
+        <td><img alt="", id="m1_2", width="256", height="256" /></td>
+        <td><img alt="", id="m2_2", width="256", height="256" /></td>
+        <td><img alt="", id="m3_2", width="256", height="256" /></td>
+        <td><img alt="", id="m4_2", width="256", height="256" /></td>
+        <td><img alt="", id="m5_2", width="256", height="256" /></td>
+        <td><img alt="", id="m6_2", width="256", height="256" /></td>
+      </tr>
+      <tr>
+        <td><img alt="", id="m0_3", width="256", height="256" /></td>
+        <td><img alt="", id="m1_3", width="256", height="256" /></td>
+        <td><img alt="", id="m2_3", width="256", height="256" /></td>
+        <td><img alt="", id="m3_3", width="256", height="256" /></td>
+        <td><img alt="", id="m4_3", width="256", height="256" /></td>
+        <td><img alt="", id="m5_3", width="256", height="256" /></td>
+        <td><img alt="", id="m6_3", width="256", height="256" /></td>
+      </tr>
+    </table>
+
+    <div id="myData"></div>
+    <script type='text/javascript'>
+      const text_list = ['a frisbee to the left of a cake', 'a carrot to the right of a fork', 'a mouse to the left of a couch', 'a stop sign below a potted plant', 'a handbag to the right of a laptop', 'a remote to the right of a boat', 'a cell phone above an apple', 'a tv above a surfboard', 'a fire hydrant above a chair', 'a boat below a pizza', 'a hot dog to the right of an apple', 'a refrigerator above a skateboard', 'a sink to the right of a tie', 'a sheep to the right of a snowboard', 'a sports ball above a refrigerator', 'a vase to the left of a dining table', 'a microwave to the right of a tennis racket', 'a couch to the left of a laptop', 'a carrot to the right of a tennis racket', 'a bicycle to the left of an airplane', 'a bench to the right of a bed', 'a skateboard below a potted plant', 'an airplane to the right of a clock', 'a dining table below a traffic light', 'a toaster to the left of a toilet', 'a snowboard below a chair', 'a book below a sports ball', 'a sports ball to the left of a bird', 'a car above a donut', 'an oven to the left of an orange', 'a toaster above a microwave', 'a book to the right of a bed', 'a bottle above a donut', 'a cow to the right of an umbrella', 'an orange above a toothbrush', 'a bowl to the right of a snowboard', 'a fire hydrant below a skis', 'a kite below a book', 'a traffic light below a sink', 'a frisbee to the left of a tie', 'a keyboard to the left of a fire hydrant', 'a sandwich to the right of a horse', 'a dog below a teddy bear', 'a parking meter below a tie', 'a traffic light above a toilet', 'a giraffe below an orange', 'a laptop below a dining table', 'a book below a train', 'a bus above a banana', 'a stop sign above a book', 'an umbrella below a couch', 'a traffic light to the left of a hot dog', 'a banana below a keyboard', 'a backpack below a tie', 'a sports ball to the left of a stop sign', 'a bird below a carrot', 'a bowl above a tv', 'a stop sign below a bicycle', 'a skis to the right of a vase', 'a cup above a clock', 'a bird below a bus', 'a mouse below a carrot', 'a skis above a vase', 'a microwave above a traffic light', 'a hot dog above a baseball glove', 'a truck below a horse', 'a bear below a cup', 'a vase to the left of a teddy bear', 'a carrot to the right of a pizza', 'a suitcase above a keyboard', 'a sink above an elephant', 'a bed to the left of a bus', 'a bottle to the left of a hair drier', 'a surfboard above an oven', 'an oven to the left of a skateboard', 'a baseball bat below a book', 'a suitcase above a bear', 'a skateboard above a frisbee', 'a horse to the left of a cat', 'a frisbee above a potted plant', 'an airplane above a frisbee', 'a cow to the right of a donut', 'a clock above a baseball bat', 'an umbrella below a wine glass', 'a book below a surfboard', 'a sandwich to the left of a boat', 'a toothbrush above a chair', 'a car above a suitcase', 'a bear to the right of a toaster', 'a tie to the right of a parking meter', 'an elephant above a frisbee', 'a pizza to the right of a banana', 'a skateboard below a mouse', 'a laptop to the left of a cat', 'a remote below a cake', 'a handbag above a potted plant', 'a carrot to the left of a tie', 'an orange above a train', 'a chair below a zebra', 'a carrot above a boat']
+      const uniq_list = [19100, 24653, 29131, 8606, 17652, 6603, 26515, 22815, 7904, 6486, 26363, 22495, 18253, 12812, 20714, 29841, 23283, 29120, 23113, 810, 9942, 22356, 3792, 7257, 29971, 20086, 20727, 10321, 2084, 27141, 30955, 29633, 23544, 13352, 27244, 19973, 7646, 21186, 7366, 17831, 8001, 12373, 12046, 8966, 7264, 15896, 29727, 5257, 4254, 8754, 17066, 7170, 26186, 16226, 8341, 10516, 25814, 887, 19792, 24514, 3937, 27667, 19794, 7335, 21865, 5416, 14686, 31510, 27552, 18714, 14405, 4381, 23780, 22884, 22461, 21636, 14555, 18915, 10811, 19134, 3344, 13642, 21645, 16896, 22927, 6431, 29065, 1824, 14972, 8963, 13984, 26053, 22416, 11271, 28697, 17604, 18051, 5015, 15407, 6465]
+      url_prefix = "./images/"
+      index = Math.floor(Math.random() * 100);
+      let uniq_id = uniq_list[index] 
+      let text_id = text_list[index] 
+
+      document.getElementById("txt").textContent = text_id;
+
+      m0 = "glide"
+      document.getElementById("m0_0").src = url_prefix + m0 + "/" + uniq_id + "_0.png";
+      document.getElementById("m0_1").src = url_prefix + m0 + "/" + uniq_id + "_1.png";
+      document.getElementById("m0_2").src = url_prefix + m0 + "/" + uniq_id + "_2.png";
+      document.getElementById("m0_3").src = url_prefix + m0 + "/" + uniq_id + "_3.png";
+
+      m1 = "glide_cdm"
+      document.getElementById("m1_0").src = url_prefix + m1 + "/" + uniq_id + "_0.png";
+      document.getElementById("m1_1").src = url_prefix + m1 + "/" + uniq_id + "_1.png";
+      document.getElementById("m1_2").src = url_prefix + m1 + "/" + uniq_id + "_2.png";
+      document.getElementById("m1_3").src = url_prefix + m1 + "/" + uniq_id + "_3.png";
+
+      m2 = "dallemini"
+      document.getElementById("m2_0").src = url_prefix + m2 + "/" + uniq_id + "_0.png";
+      document.getElementById("m2_1").src = url_prefix + m2 + "/" + uniq_id + "_1.png";
+      document.getElementById("m2_2").src = url_prefix + m2 + "/" + uniq_id + "_2.png";
+      document.getElementById("m2_3").src = url_prefix + m2 + "/" + uniq_id + "_3.png";
+      
+      m3 = "cogview2"
+      document.getElementById("m3_0").src = url_prefix + m3 + "/" + uniq_id + "_0.png";
+      document.getElementById("m3_1").src = url_prefix + m3 + "/" + uniq_id + "_1.png";
+      document.getElementById("m3_2").src = url_prefix + m3 + "/" + uniq_id + "_2.png";
+      document.getElementById("m3_3").src = url_prefix + m3 + "/" + uniq_id + "_3.png";
+      
+      m4 = "dallev2"
+      document.getElementById("m4_0").src = url_prefix + m4 + "/" + uniq_id + "_0.png";
+      document.getElementById("m4_1").src = url_prefix + m4 + "/" + uniq_id + "_1.png";
+      document.getElementById("m4_2").src = url_prefix + m4 + "/" + uniq_id + "_2.png";
+      document.getElementById("m4_3").src = url_prefix + m4 + "/" + uniq_id + "_3.png";
+
+      m5 = "stable-diffusion"
+      document.getElementById("m5_0").src = url_prefix + m5 + "/" + uniq_id + "_0.png";
+      document.getElementById("m5_1").src = url_prefix + m5 + "/" + uniq_id + "_1.png";
+      document.getElementById("m5_2").src = url_prefix + m5 + "/" + uniq_id + "_2.png";
+      document.getElementById("m5_3").src = url_prefix + m5 + "/" + uniq_id + "_3.png";
+
+      m6 = "sd_cdm"
+      document.getElementById("m6_0").src = url_prefix + m6 + "/" + uniq_id + "_0.png";
+      document.getElementById("m6_1").src = url_prefix + m6 + "/" + uniq_id + "_1.png";
+      document.getElementById("m6_2").src = url_prefix + m6 + "/" + uniq_id + "_2.png";
+      document.getElementById("m6_3").src = url_prefix + m6 + "/" + uniq_id + "_3.png";
+    </script>
+    
+  </center> 
+</div>
+
+</body>
+</html>
