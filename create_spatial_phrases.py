@@ -38,7 +38,7 @@ RELATIONS_SHORT = {"to the left of": "left", "to the right of": "right", "above"
 
 data = []
 count = 0
-################ two objects: ################
+################ two objects ################
 for (s1, s2) in NC2_COMBOS:
 	# r = random.choice(RELATIONS[args.rel_type])
 	articled_s1 = inflect_engine.a(s1)
