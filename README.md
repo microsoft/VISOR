@@ -1,4 +1,5 @@
 # Benchmarking Spatial Relationships in Text-to-Image Generation
+*You can download the report from [here](https://arxiv.org/abs/2212.10015).*
 
 <!-- ![](assets/motivating_example_4.png "") -->
 <p align=center>
