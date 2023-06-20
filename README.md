@@ -1,5 +1,4 @@
 # Benchmarking Spatial Relationships in Text-to-Image Generation
-*Tejas Gokhale, Hamid Palangi, Besmira Nushi, Vibhav Vineet, Eric Horvitz, Ece Kamar, Chitta Baral, Yezhou Yang*
 
 <!-- ![](assets/motivating_example_4.png "") -->
 <p align=center>
