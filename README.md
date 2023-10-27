@@ -1,6 +1,8 @@
 # Benchmarking Spatial Relationships in Text-to-Image Generation
 *You can download the report from [here](https://arxiv.org/abs/2212.10015).*
 
+*For further questions, please reach out to Tejas Gokhale (gokhale@umbc.edu) and Hamid Palangi (hpalangi@microsoft.com)*
+
 <!-- ![](assets/motivating_example_4.png "") -->
 <p align=center>
   <img src="assets/visor_example_detailed_new.png" height=400px/>
